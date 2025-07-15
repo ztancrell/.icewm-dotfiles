@@ -1,2 +1,5 @@
 # Start the picom compositor
 picom --config ~/.config/picom.conf &
+
+# start feh for background randomization
+feh --randomize --bg-scale ~/.icewm/themes/IceWM-RedZen/backgrounds/artstation/*
