@@ -52,4 +52,4 @@ Welcome to my personalized IceWM setup! This directory contains all configuratio
 
 **Enjoy your Linux journey!**
 
-*Questions or want to learn more? Check out the [IceWM manual](https://ice-wm.org/manual/).* 
+_Questions or want to learn more? [Check out the IceWM manual.](https://ice-wm.org/manual/)_
