@@ -1,0 +1,1 @@
+key "Alt+F1" dmenu_run -nb "#3f3f3f" -nf "#dcdccc" -sb "#8cd0d3" -sf "#3f3f3f" -fn "Noto Sans-10"

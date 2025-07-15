@@ -1,39 +1,54 @@
+# -----------------------------
+# IceWM Main Menu Configuration
+# Each section below groups related applications or tools.
+# Edit this file to customize your IceWM menu.
+# -----------------------------
+
+# Accessories: General utilities and tools
 menu "Accessories" "applications-accessories" {
+    # Archiving tools
     menu "Archiving" "folder" {
         prog "Xarchiver" "xarchiver" xarchiver 
         prog "XfBurn" "org.xfce.xfburn" xfburn
     }
+    # File management
     menu "File Management" "folder" {
-        prog "Thunar File Manager" "org.xfce.thunar" thunar 
-        prog "Bulk Rename" "org.xfce.thunar" thunar --bulk-rename 
+        prog "PCManFM File Manager" "system-file-manager" pcmanfm 
+        prog "Bulk Rename" "system-file-manager" pcmanfm --bulk-rename 
         prog "BleachBit" "bleachbit" bleachbit
     }
+    # Text editors and IDEs
     menu "Text Editors" "folder" {
-        prog "Mousepad" "org.xfce.mousepad" mousepad 
+        prog "Leafpad" "leafpad" leafpad 
         prog "VSCodium" "vscodium" /usr/share/codium/codium 
         prog "Cursor" "appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor" /home/zach/Applications/Cursor-1.1.3-x86_64_3eb0754800ff658cddb8178a3cf7c008.AppImage 
     }
+    # Utilities and system tools
     menu "Utilities" "folder" {
-	prog "Application Finder" "org.xfce.appfinder" xfce4-appfinder
-	prog "Catfish File Search" "org.xfce.catfish" catfish 
-	prog "Disks" "org.gnome.DiskUtility" gnome-disks
-	prog "Screenshot" "org.xfce.screenshooter" xfce4-screenshooter
-	prog "PulseAudio Volume Control" "pavucontrol" pavucontrol
+        prog "Application Finder" "dmenu" dmenu_run
+        prog "Recoll File Search" "recoll" recoll 
+        prog "Disks" "org.gnome.DiskUtility" gnome-disks
+        prog "Screenshot" "flameshot" flameshot gui
+        prog "PulseAudio Volume Control" "pavucontrol" pavucontrol
     }
-
+    
+    # Terminal Entry
+    prog "Terminal" "utilities-terminal" alacritty
 }
 
+# Audio & Video: Multimedia applications
 menu "Audio & Video" "applications-multimedia" {
     menu "Audio" "folder" {
         prog "Spotify" "com.spotify.Client" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u  @@
         prog "mpv Media Player" "mpv" mpv --player-operation-mode=pseudo-gui -- 
     }
     menu "Video Editing" "folder" {
-        prog "Shotcut" "org.shotcut.Shotcut" shotcut 
+        prog "KDENLive" "system-video-editor" kdenlive 
         prog "OBS Studio" "com.obsproject.Studio" obs
     }
 }
 
+# Development: Programming tools and IDEs
 menu "Development" "applications-development" {
     menu "IDEs" "folder" {
         prog "VSCodium" "vscodium" /usr/share/codium/codium 
@@ -41,6 +56,7 @@ menu "Development" "applications-development" {
     }
 }
 
+# Games: Game launchers and related tools
 menu "Games" "applications-games" {
     menu "Launchers" "folder" {
         prog "Steam" "com.valvesoftware.Steam" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam @@u  @@
@@ -53,21 +69,37 @@ menu "Games" "applications-games" {
     }
 }
 
+# Graphics: Image editing and drawing
 menu "Graphics" "applications-graphics" {
     menu "2D Graphics" "folder" {
         prog "Pinta" "pinta" pinta 
     }
 }
 
+# Internet: Browsers, email, file transfer, chat
 menu "Internet" "applications-internet" {
     menu "Web Browsers" "folder" {
         prog "Firefox Nightly" "firefox" firefox-nightly
+    }
+    menu "Email" "folder" {
         prog "Thunderbird" "thunderbird" thunderbird 
     }
     menu "File Transfer" "folder" {
         prog "qBittorrent" "qbittorrent" qbittorrent 
     }
-    menu "Instant Messaging" "folder" {
-        prog "Discord" "com.discordapp.Discord" /usr/bin/flatpak run com.discordapp.Discord
+    menu "Instant Messengers" "folder" {
+	prog "Discord" "com.discordapp.Discord" /usr/bin/flatpak run com.discordapp.Discord
     }
+}
+
+# IceWM Config: Quick access to config files and session actions
+menu "IceWM Config" "icewm" {
+    # Edit main IceWM config files
+    prog "Edit Preferences" "text-editor" leafpad /home/zach/.icewm/preferences
+    prog "Edit Prefoverride" "text-editor" leafpad /home/zach/.icewm/prefoverride
+    prog "Edit Menu" "text-editor" leafpad /home/zach/.icewm/menu
+    prog "Edit Toolbar" "text-editor" leafpad /home/zach/.icewm/toolbar
+    prog "Edit Theme" "text-editor" leafpad /home/zach/.icewm/theme
+    # Restart IceWM session
+    prog "Restart IceWM" "system-restart" icewm --restart
 }

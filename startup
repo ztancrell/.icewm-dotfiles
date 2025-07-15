@@ -1,3 +1,2 @@
 # Start the picom compositor
 picom --config ~/.config/picom.conf &
-

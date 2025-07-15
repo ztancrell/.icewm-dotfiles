@@ -1,27 +1,45 @@
-# set the window manager behavior
-TaskBarShowIcons=1
-TaskBarShowWindowList=0
-TaskBarAtTop=1
-TaskBarOnTop=1
+# Terminal
+program.xterm="xterm"  # Fallback terminal
+program.alacritty="alacritty"  # Primary terminal
 
-# Set the height of the taskbar
-TaskBarHeight=24  # You can adjust this value to make it smaller or larger
+# File Manager
+program.filemanager="pcmanfm"  # PCManFM File Manager
 
-# Set the font size for the taskbar
-TaskBarFont="Sans 10"  # Change the font size to a smaller value
+# Web Browser
+program.browser="firefox-nightly"  # Firefox Web Browser
 
-# Set the icon size in the taskbar
-TaskBarIconSize=16  # Adjust this value for smaller icons
+# Text Editors
+program.mousepad="mousepad"  # Mousepad Text Editor
+program.vscodium="vscodium"  # VSCodium IDE
+program.cursor="appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor"  # Cursor AppImage
 
-#  Maximized windows can be resized.
-SizeMaximized=1 # 0/1
+# Archive Manager
+program.xarchiver="xarchiver"  # Xarchiver
 
-# Disable mouse animations
-FocusFollowMouse = false
-ShowWorkspaceButtons=0
-NumberOfWorkspaces=1
-WorkspaceNames="Main"
-TaskBarShowWorkspaces=0
-TaskBarShowWindowLabels=0
-ShowWindowTitles=0
-ShowWindowTitles=1
+# Media Player
+program.spotify="spotify"  # Spotify
+program.mpv="mpv"  # MPV Media Player
+
+# Video Editing
+program.shotcut="shotcut"  # Shotcut Video Editor
+program.obs="obs"  # OBS Studio
+
+# Utilities
+program.catfish="catfish"  # Catfish File Search
+program.gnome_disks="gnome-disks"  # Disks Utility
+program.screenshot="xfce4-screenshooter"  # Screenshot Tool
+program.pavucontrol="pavucontrol"  # PulseAudio Volume Control
+program.application_finder="xfce4-appfinder"  # Application Finder
+
+# Games
+program.steam="flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam"  # Steam
+program.heroic="heroic"  # Heroic Games Launcher
+program.lutris="lutris"  # Lutris
+
+# Internet
+program.thunderbird="thunderbird"  # Thunderbird Email Client
+program.qbittorrent="qbittorrent"  # qBittorrent
+program.discord="flatpak run com.discordapp.Discord"  # Discord
+
+# Graphics
+program.pinta="pinta"  # Pinta Image Editor
