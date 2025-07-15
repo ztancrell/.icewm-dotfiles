@@ -1,0 +1,73 @@
+menu "Accessories" "applications-accessories" {
+    menu "Archiving" "folder" {
+        prog "Xarchiver" "xarchiver" xarchiver 
+        prog "XfBurn" "org.xfce.xfburn" xfburn
+    }
+    menu "File Management" "folder" {
+        prog "Thunar File Manager" "org.xfce.thunar" thunar 
+        prog "Bulk Rename" "org.xfce.thunar" thunar --bulk-rename 
+        prog "BleachBit" "bleachbit" bleachbit
+    }
+    menu "Text Editors" "folder" {
+        prog "Mousepad" "org.xfce.mousepad" mousepad 
+        prog "VSCodium" "vscodium" /usr/share/codium/codium 
+        prog "Cursor" "appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor" /home/zach/Applications/Cursor-1.1.3-x86_64_3eb0754800ff658cddb8178a3cf7c008.AppImage 
+    }
+    menu "Utilities" "folder" {
+	prog "Application Finder" "org.xfce.appfinder" xfce4-appfinder
+	prog "Catfish File Search" "org.xfce.catfish" catfish 
+	prog "Disks" "org.gnome.DiskUtility" gnome-disks
+	prog "Screenshot" "org.xfce.screenshooter" xfce4-screenshooter
+	prog "PulseAudio Volume Control" "pavucontrol" pavucontrol
+    }
+
+}
+
+menu "Audio & Video" "applications-multimedia" {
+    menu "Audio" "folder" {
+        prog "Spotify" "com.spotify.Client" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u  @@
+        prog "mpv Media Player" "mpv" mpv --player-operation-mode=pseudo-gui -- 
+    }
+    menu "Video Editing" "folder" {
+        prog "Shotcut" "org.shotcut.Shotcut" shotcut 
+        prog "OBS Studio" "com.obsproject.Studio" obs
+    }
+}
+
+menu "Development" "applications-development" {
+    menu "IDEs" "folder" {
+        prog "VSCodium" "vscodium" /usr/share/codium/codium 
+        prog "Cursor" "appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor" /home/zach/Applications/Cursor-1.1.3-x86_64_3eb0754800ff658cddb8178a3cf7c008.AppImage 
+    }
+}
+
+menu "Games" "applications-games" {
+    menu "Launchers" "folder" {
+        prog "Steam" "com.valvesoftware.Steam" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam @@u  @@
+        prog "Heroic Games Launcher" "heroic" /opt/Heroic/heroic 
+        prog "Lutris" "net.lutris.Lutris" lutris 
+    }
+    menu "Minecraft" "folder" {
+        prog "Prism Launcher" "org.prismlauncher.PrismLauncher" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=prismlauncher --file-forwarding org.prismlauncher.PrismLauncher @@u  @@
+        prog "Minecraft Bedrock Launcher" "io.mrarm.mcpelauncher" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=mcpelauncher-ui-qt --file-forwarding io.mrarm.mcpelauncher @@u  @@
+    }
+}
+
+menu "Graphics" "applications-graphics" {
+    menu "2D Graphics" "folder" {
+        prog "Pinta" "pinta" pinta 
+    }
+}
+
+menu "Internet" "applications-internet" {
+    menu "Web Browsers" "folder" {
+        prog "Firefox Nightly" "firefox" firefox-nightly
+        prog "Thunderbird" "thunderbird" thunderbird 
+    }
+    menu "File Transfer" "folder" {
+        prog "qBittorrent" "qbittorrent" qbittorrent 
+    }
+    menu "Instant Messaging" "folder" {
+        prog "Discord" "com.discordapp.Discord" /usr/bin/flatpak run com.discordapp.Discord
+    }
+}

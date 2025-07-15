@@ -1,0 +1,255 @@
+# =============================================================================
+# RedZen - A Zenburn-based IceWM Theme
+# =============================================================================
+# This theme is a personal modification of the original Zenburn theme for IceWM.
+# Original Zenburn Theme Author: Ryan Reamsbottom
+# Original: https://github.com/ryanrms/IceWM-Zenburn
+#
+# RedZen introduces a muted red accent and personal touches while preserving the
+# Zenburn aesthetic and spirit.
+# =============================================================================
+
+# Theme metadata
+ThemeAuthor="Ryan Reamsbottom (original), Zach (RedZen mod)"
+ThemeDescription="RedZen - Zenburn-based with a red accent"
+
+# =============================================================================
+# GLOBAL THEME SETTINGS
+# =============================================================================
+Look=flat                    # Theme appearance: flat, 3d, or gradient
+TrayDrawBevel=0              # Draw bevel on system tray (0=no, 1=yes)
+RolloverButtonsSupported=1   # Support for button hover effects (0=no, 1=yes)
+
+# =============================================================================
+# TITLEBAR CONFIGURATION
+# =============================================================================
+# Titlebar button configuration
+# Supported buttons: d=desktop, h=hide, i=minimize, m=maximize, r=rollup, s=sysmenu, x=close
+TitleButtonsSupported="dhimrsx"  # Buttons supported by this theme
+# TitleButtonsLeft="d"           # Buttons on left side (commented out)
+
+# =============================================================================
+# WINDOW BORDER AND TITLEBAR COLORS
+# =============================================================================
+# Normal (unfocused) window colors
+ColorNormalButtonBorder="#2b2a29"    # Border color of titlebar buttons
+ColorNormalTitleBar="#3f3f3f"        # Background color of unfocused titlebar
+ColorNormalTitleBarText="#dcdccc"    # Text color of unfocused titlebar
+ColorNormalTitleButton="#8cd0d3"     # Color of titlebar buttons
+ColorNormalBorder="#3f3f3f"          # Border color of unfocused windows
+
+# Active (focused) window colors
+ColorActiveBorder="#2b2a29"          # Border color of focused windows
+ColorActiveTitleBar="#3f3f3f"        # Background color of focused titlebar
+ColorActiveTitleBarText="#dcdccc"    # Text color of focused titlebar
+ColorToolButton=""                   # Color of tool buttons (empty for default)
+
+# Titlebar dimensions and positioning
+TitleBarHeight=20           # Height of titlebar in pixels (0-128)
+TitleBarHorzOffset=10       # Horizontal offset for title text (-128 to 128)
+
+# =============================================================================
+# WINDOW BORDER SIZES
+# =============================================================================
+# Border sizes for resizable windows
+BorderSizeX=5               # Left/right border width (0-128)
+BorderSizeY=5               # Top/bottom border height (0-128)
+CornerSizeX=10              # Width of window corner (0-64)
+CornerSizeY=10              # Height of window corner (0-64)
+
+# Alternative border settings (commented out - no borders)
+#BorderSizeX=0              # No left/right borders
+#BorderSizeY=0              # No top/bottom borders
+#CornerSizeX=0              # No corner width
+#CornerSizeY=0              # No corner height
+
+# Border sizes for non-resizable dialog windows
+DlgBorderSizeX=3            # Left/right border width for dialogs (0-128)
+DlgBorderSizeY=3            # Top/bottom border height for dialogs (0-128)
+
+# Window shape protection
+ShapesProtectClientWindow=0 # Protect client window from shape changes (0=no, 1=yes)
+
+# =============================================================================
+# MENU COLORS
+# =============================================================================
+ColorNormalMenu="#3f3f3f"           # Background color of pop-up menus
+ColorActiveMenuItem="#dcdccc"       # Background of selected menu item
+ColorNormalMenuItemText="#dcdccc"   # Text color of regular menu items
+ColorActiveMenuItemText="#3f3f3f"   # Text color of selected menu items
+ColorDisabledMenuItemText="#E0B000" # Text color of disabled menu items
+
+# =============================================================================
+# MOVE/RESIZE STATUS WINDOW
+# =============================================================================
+ColorMoveSizeStatus="#3f3f3f"       # Background of move/resize status window
+ColorMoveSizeStatusText="#dcdccc"   # Text color of move/resize status window
+
+# =============================================================================
+# DIALOG WINDOWS AND BUTTONS
+# =============================================================================
+ColorDialog="#3f3f3f"               # Background of dialog windows
+ColorNormalButton="#3f3f3f"         # Background of normal buttons
+ColorNormalButtonText="#dcdccc"     # Text color of normal buttons
+
+# =============================================================================
+# WINDOW LIST COLORS
+# =============================================================================
+ColorListBox="#3f3f3f"              # Background of listboxes
+ColorListBoxText="#dcdccc"          # Text color in listboxes
+ColorListBoxSelection="#496eb0"     # Background of selected listbox items
+ColorListBoxSelectionText="#3f3f3f" # Text color of selected listbox items
+
+# =============================================================================
+# QUICK SWITCH (ALT+TAB) WINDOW
+# =============================================================================
+ColorQuickSwitch="#3f3f3f"          # Background of the quick switch window
+ColorQuickSwitchText="#dcdccc"      # Text color in quick switch window
+ColorQuickSwitchActive="#496eb0"    # Rectangle around active icon in quick switch
+
+# =============================================================================
+# CLOCK COLORS
+# =============================================================================
+ColorClock=""                       # Background of non-LCD clock (empty for transparency)
+ColorClockText="#dcdcdc"            # Text color of clock
+
+# =============================================================================
+# CPU STATUS MONITOR COLORS
+# =============================================================================
+ColorCPUStatusUser="#FF8C00"        # User load on CPU monitor (orange)
+ColorCPUStatusSystem="#FF0000"      # System load on CPU monitor (red)
+ColorCPUStatusNice="#0000FF"        # Nice load on CPU monitor (blue)
+ColorCPUStatusIdle="#252525"        # Idle load on CPU monitor (dark gray)
+
+# =============================================================================
+# NETWORK STATUS MONITOR COLORS
+# =============================================================================
+ColorNetSend="#b76262"              # Outgoing network load (red)
+ColorNetReceive="#5f9c5f"           # Incoming network load (green)
+ColorNetIdle="#3f3f3f"              # Idle network status (dark gray)
+
+# =============================================================================
+# TASKBAR COLORS
+# =============================================================================
+# Tooltip colors
+ColorToolTip="#3f3f3f"              # Background of tooltips
+ColorToolTipText="#dcdccc"          # Text color of tooltips
+
+# Input field colors
+ColorInput="#3f3f3f"                # Background of text entry fields
+ColorInputText="#dcdccc"            # Text color of text entry fields
+ColorInputSelection="#8faf9f"       # Background of selected text in entry fields
+ColorInputSelectionText="#dcdccc"   # Color of selected text in entry fields
+
+# Workspace button colors
+ColorNormalWorkspaceButton="#3f3f3f"        # Background of normal workspace buttons
+ColorNormalWorkspaceButtonText="#dcdccc"    # Text color of normal workspace buttons
+ColorActiveWorkspaceButton="#8faf9f"        # Background of active workspace button
+ColorActiveWorkspaceButtonText="#3f3f3f"    # Text color of active workspace button
+
+# Workspace button font settings (using official IceWM parameters)
+NormalWorkspaceFontNameXft="Noto Sans Mono:size=5:medium"   # Font for normal workspace buttons
+ActiveWorkspaceFontNameXft="Noto Sans Mono:size=5:medium"   # Font for active workspace button
+
+# Taskbar application colors
+ColorDefaultTaskBar="#3f3f3f"               # Background of the taskbar
+ColorNormalTaskBarApp="#3f3f3f"             # Background for task buttons of regular windows
+ColorNormalTaskBarAppText="#f5f5f5"         # Text color for task buttons of regular windows
+ColorMinimizedTaskBarApp="#3f3f3f"          # Background for task buttons of minimized windows
+ColorMinimizedTaskBarAppText="696969"       # Text color for task buttons of minimized windows
+ColorActiveTaskBarApp="#8cd0d3"             # Background for task buttons of the active window
+ColorActiveTaskBarAppText="#3f3f3f"         # Text color for task buttons of the active window
+
+# Taskbar dimensions and styling
+TaskBarHeight=20                   # Height of the taskbar (0-128)
+TaskBarIconSize=18                 # Size of icons in the taskbar
+TaskBarFont="Sans 8"               # Font for taskbar text
+
+# =============================================================================
+# FONT SPECIFICATIONS
+# =============================================================================
+# Note: When IceWM is configured with --enable-xfreetype, only Xft settings are used
+# Legacy X11 font names are commented out for reference
+
+# Titlebar font
+#TitleFontName="-*-sans-medium-r-*-*-10-*-*-*-*-*-*-*"
+TitleFontNameXft="Noto Sans:size=10:normal"
+
+# Menu font
+#MenuFontName="-*-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+MenuFontNameXft="Noto Sans:size=10:medium"
+
+# Taskbar fonts
+#NormalTaskBarFontName="-*-sans-bold-r-normal-*-7-*-*-p-*--*-*"
+NormalTaskBarFontNameXft="Noto Sans:size=10:medium"
+#ActiveTaskBarFontName="-*-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+ActiveTaskBarFontNameXft="Noto Sans:size=10:bold"
+
+# Button fonts
+#NormalButtonFontName="-*-sans-medium-r-normal-*-14-*-*-p-*--*-*"
+NormalButtonFontNameXft="Noto Sans:size=9:medium"
+#ActiveButtonFontName="-*-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+ActiveButtonFontNameXft="Noto Sans:size=9:bold"
+
+# Label font
+#LabelFontName="-*-sans-medium-r-normal-*-14-*-*-p-*--*-*"
+LabelFontNameXft="Noto Sans:size=12:bold"
+
+# Tooltip font
+#ToolTipFontName="-*-sans-medium-r-normal-*-14-*-*-p-*--*-*"
+ToolTipFontNameXft="Noto Sans:size=10:medium"
+
+# Clock font
+#ClockFontName="-*-monospace-medium-r-normal-*-14-*-*-p-*--*-*"
+ClockFontNameXft="Noto Sans:size=12:medium"
+
+# APM (battery) font
+#ApmFontName="-*-monospace-medium-r-normal-*-14-*-*-p-*--*-*"
+ApmFontNameXft="Menlo LG S for Powerline Regular:size=10"
+
+# Input field font
+#InputFontName="-*-monospace-medium-r-normal-*-14-*-*-p-*--*-*"
+InputFontNameXft="Menlo LG S for Powerline Regular:size=12"
+
+# Move/resize status font
+#moveSizeFontName="-*-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+moveSizeFontNameXft="Noto Sans:size=12:bold"
+
+# Quick switch font
+#QuickSwitchFontName="-*-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+QuickSwitchFontNameXft="Noto Sans:size=12:bold"
+
+# Listbox font
+#ListBoxFontName="-*-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+ListBoxFontNameXft="Noto Sans:size=10:medium"
+
+# Status font
+#StatusFontName="-sans-bold-r-normal-*-14-*-*-p-*--*-*"
+StatusFontNameXft="Noto Sans:size=12:bold"
+
+# Tool button font
+#ToolButtonFontName="-*-monospace-bold-r-normal-*-14-*-*-p-*--*-*"
+ToolButtonFontNameXft="Menlo LG S for Powerline Bold:size=10"
+
+# Function key font
+#FxFontName="-*-monospace-bold-r-normal-*-14-*-*-p-*--*-*"
+FxFontNameXft="Menlo LG S for Powerline Bold:size=10"
+
+# Minimized window font
+#MinimizedWindowFontName="-*-sans-medium-r-normal-*-14-*-*-p-*--*-*"
+MinimizedWindowFontNameXft="Noto Sans:size=10:medium"
+
+# =============================================================================
+# DESKTOP BACKGROUND SETTINGS
+# =============================================================================
+# These settings are used by icewmbg (IceWM background manager)
+DesktopBackgroundColor = #3f3f3f                           # Color of desktop background
+DesktopBackgroundCenter = 1                               # Center background image (0=no, 1=yes)
+DesktopBackgroundScaled = 1                               # Scale background to full screen (0=no, 1=yes)
+DesktopBackgroundImage = '~/.wallpapers/artstation/philip-straub-123672.jpg'  # Background image path
+
+# =============================================================================
+# LEGACY COMPATIBILITY
+# =============================================================================
+# Workspace button font (legacy parameter - keeping for compatibility with older IceWM versions)
+WorkspaceButtonFontNameXft="Noto Sans Mono:size=5:medium"

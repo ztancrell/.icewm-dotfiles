@@ -1,0 +1,27 @@
+# set the window manager behavior
+TaskBarShowIcons=1
+TaskBarShowWindowList=0
+TaskBarAtTop=1
+TaskBarOnTop=1
+
+# Set the height of the taskbar
+TaskBarHeight=24  # You can adjust this value to make it smaller or larger
+
+# Set the font size for the taskbar
+TaskBarFont="Sans 10"  # Change the font size to a smaller value
+
+# Set the icon size in the taskbar
+TaskBarIconSize=16  # Adjust this value for smaller icons
+
+#  Maximized windows can be resized.
+SizeMaximized=1 # 0/1
+
+# Disable mouse animations
+FocusFollowMouse = false
+ShowWorkspaceButtons=0
+NumberOfWorkspaces=1
+WorkspaceNames="Main"
+TaskBarShowWorkspaces=0
+TaskBarShowWindowLabels=0
+ShowWindowTitles=0
+ShowWindowTitles=1
