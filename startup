@@ -1,5 +1,10 @@
+#!/bin/sh
+# IceWM startup file
+# This script is run at the start of an IceWM session.
+# Add your startup commands below.
+
+
 # Start the picom compositor
 picom --config ~/.config/picom.conf &
 
-# start feh for background randomization
-feh --randomize --bg-scale ~/.icewm/themes/IceWM-RedZen/backgrounds/artstation/*
+feh --randomize --bg-scale ~/.icewm/themes/IceWM-RedZen/backgrounds/*
