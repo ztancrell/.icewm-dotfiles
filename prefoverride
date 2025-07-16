@@ -1,20 +1,20 @@
 # --- Taskbar Appearance & Behavior (see: https://ice-wm.org/manual/icewm-10.html#TASK-BAR) ---
 # TaskBarShowIcons = 1
-TaskBarShowIcons=1
+TaskBarShowIcons=0
 # TaskBarShowWindowList = 0
 TaskBarShowWindowList=0
 # TaskBarAtTop = 1
-TaskBarAtTop=1
+TaskBarAtTop=0
 # TaskBarOnTop = 1
 TaskBarOnTop=1
 # TaskBarHeight = 24  # Height of the taskbar
-TaskBarHeight=24  # You can adjust this value to make it smaller or larger
+TaskBarHeight=20  # You can adjust this value to make it smaller or larger
 # TaskBarFont = "Sans 8"  # Font for taskbar items
 TaskBarFont="Sans 8"  # Change the font size to a smaller value
 # TaskBarIconSize = 12  # Size of icons in the taskbar
 TaskBarIconSize=12  # Adjust this value for smaller icons
 # TaskBarShowWindowLabels = 1  # Show window titles in the taskbar (0 = icons only)
-TaskBarShowWindowLabels=1
+TaskBarShowWindowLabels=0
 # TaskbarButtonWidthDivisor = 8  # Higher = narrower taskbar buttons
 TaskbarButtonWidthDivisor=8
 # TaskBarShowWindowIcons = 1  # Show icons on taskbar buttons
@@ -38,17 +38,17 @@ FocusFollowMouse = false
 
 # --- Workspaces (see: https://ice-wm.org/manual/icewm-10.html#WORKSPACES) ---
 # ShowWorkspaceButtons = 0  # Show workspace buttons on the taskbar
-ShowWorkspaceButtons=1
+ShowWorkspaceButtons=0
 # NumberOfWorkspaces = 1  # Number of workspaces
-NumberOfWorkspaces=4
+NumberOfWorkspaces=1
 # WorkspaceNames = "Main"  # Names for each workspace
 WorkspaceNames="Main", "DNS TLS Relay"
 # TaskBarShowWorkspaces = 0  # Show workspace switching buttons on the taskbar
-TaskBarShowWorkspaces=1
+TaskBarShowWorkspaces=0
 
 # --- Menus (see: https://ice-wm.org/manual/icewm-10.html#MENUS) ---
-ShowSettingsMenu= 1  # Hide the built-in Settings menu
-ShowThemesMenu = 1  # Show the Themes menu
-ShowHelp = 1  # Show the Help menu
-ShowLogoutMenu = 1  # Show the Logout menu
+ShowSettingsMenu=0  # Hide the built-in Settings menu
+ShowThemesMenu = 0  # Show the Themes menu
+ShowHelp = 0  # Show the Help menu
+ShowLogoutMenu = 0  # Show the Logout menu
 # MenuFontNameXft = "Sans 10"  # Font for menus
