@@ -1,5 +1,4 @@
 # --- Taskbar Appearance & Behavior (see: https://ice-wm.org/manual/icewm-10.html#TASK-BAR) ---
-# TaskBarShowIcons = 1
 TaskBarShowIcons=0
 # TaskBarShowWindowList = 0
 TaskBarShowWindowList=0
@@ -25,7 +24,7 @@ TaskBarShowShowDesktopButton = 0  # Show the "Show Desktop" button
 # TaskBarShowNetStatus = 1  # Show network status
 # ColorNormalTaskBarAppText = "#bbbbbb"  # Text color for unfocused taskbar buttons
 # ColorActiveTaskBarAppText = "#ffffcc"  # Text color for the active (focused) taskbar button
-# ColorDefaultTaskBar = "#222222"  # Background color of the taskbar
+# ColorDefaultTaskBar="#3f3f3f80"  # Background color of the taskbar
 # ColorMinimizedTaskBarAppText = "#a85d5d"  # Text color for minimized taskbar buttons
 ColorMinimizedTaskBarAppText="#a85d5d"
 MailCommand=""                              # Removes the mail icon in the taskbar
@@ -34,7 +33,60 @@ MailCommand=""                              # Removes the mail icon in the taskb
 # SizeMaximized = 1  # Allow resizing of maximized windows
 SizeMaximized=1 # 0/1
 # FocusFollowMouse = false  # Focus windows when the mouse hovers over them
-FocusFollowMouse = false
+FocusFollowMouse = true
+SmartPlacement=1 # Auto-arrange new windows
+
+# Focus Policy Settings
+FocusOnMap=1              # Focus new windows when they appear (0=no, 1=yes)
+FocusOnMapTransient=1      # Focus transient windows (dialogs) when they appear (0=no, 1=yes)
+FocusOnMapWorkspace=1      # Focus windows when switching to their workspace (0=no, 1=yes)
+FocusOnMapRoot=0           # Focus root window when clicking on desktop (0=no, 1=yes)
+
+# Window Placement Settings
+SmartPlacement=1           # Auto-arrange new windows (0=no, 1=yes)
+SmartPlacementIsMinimized=0 # Don't auto-arrange minimized windows (0=no, 1=yes)
+SmartPlacementIsTransient=0 # Don't auto-arrange transient windows (0=no, 1=yes)
+SmartPlacementIsScreen=1   # Auto-arrange across all screens (0=no, 1=yes)
+SmartPlacementIsWorkspace=1 # Auto-arrange within current workspace (0=no, 1=yes)
+
+# Window Behavior Settings
+HonorProgramSizeHint=1     # Respect program's size hints (0=no, 1=yes)
+HonorProgramPositionHint=1 # Respect program's position hints (0=no, 1=yes)
+ShadeWindowWithMouse=1     # Allow shading windows with mouse (0=no, 1=yes)
+ShadeWindowWithMouseButton=1 # Mouse button for shading (1=left, 2=middle, 3=right)
+ShadeWindowWithMouseDoubleClick=1 # Double-click titlebar to shade (0=no, 1=yes)
+
+# Window State Settings
+ShowWindowStatus=1         # Show window status in titlebar (0=no, 1=yes)
+ShowWindowStatusTime=1     # Show time in window status (0=no, 1=yes)
+ShowWindowStatusFile=1     # Show file info in window status (0=no, 1=yes)
+ShowWindowStatusSize=1     # Show size info in window status (0=no, 1=yes)
+
+# Window Management Settings
+MoveWindowWithMouse=1      # Allow moving windows with mouse (0=no, 1=yes)
+MoveWindowWithMouseButton=1 # Mouse button for moving (1=left, 2=middle, 3=right)
+ResizeWindowWithMouse=1    # Allow resizing windows with mouse (0=no, 1=yes)
+ResizeWindowWithMouseButton=3 # Mouse button for resizing (1=left, 2=middle, 3=right)
+
+# Window Stacking Settings
+StackWindowWithMouse=1     # Allow stacking windows with mouse (0=no, 1=yes)
+StackWindowWithMouseButton=2 # Mouse button for stacking (1=left, 2=middle, 3=right)
+StackWindowWithMouseDoubleClick=0 # Double-click to stack (0=no, 1=yes)
+
+# Window Focus Settings
+FocusNewWindow=1           # Focus new windows (0=no, 1=yes)
+FocusNewWindowAsTransient=1 # Focus new transient windows (0=no, 1=yes)
+FocusNewWindowAsDesktop=0  # Focus new desktop windows (0=no, 1=yes)
+FocusNewWindowAsDock=0     # Focus new dock windows (0=no, 1=yes)
+FocusNewWindowAsToolbar=0  # Focus new toolbar windows (0=no, 1=yes)
+FocusNewWindowAsMenu=0     # Focus new menu windows (0=no, 1=yes)
+FocusNewWindowAsDialog=1   # Focus new dialog windows (0=no, 1=yes)
+FocusNewWindowAsUtility=1  # Focus new utility windows (0=no, 1=yes)
+FocusNewWindowAsSplash=0   # Focus new splash windows (0=no, 1=yes)
+FocusNewWindowAsNotification=0 # Focus new notification windows (0=no, 1=yes)
+FocusNewWindowAsCombo=0    # Focus new combo windows (0=no, 1=yes)
+FocusNewWindowAsDnd=0      # Focus new drag-and-drop windows (0=no, 1=yes)
+FocusNewWindowAsNormal=1   # Focus new normal windows (0=no, 1=yes)
 
 # --- Workspaces (see: https://ice-wm.org/manual/icewm-10.html#WORKSPACES) ---
 # ShowWorkspaceButtons = 0  # Show workspace buttons on the taskbar
@@ -42,7 +94,7 @@ ShowWorkspaceButtons=0
 # NumberOfWorkspaces = 1  # Number of workspaces
 NumberOfWorkspaces=1
 # WorkspaceNames = "Main"  # Names for each workspace
-WorkspaceNames="Main", "DNS TLS Relay"
+WorkspaceNames="Main"
 # TaskBarShowWorkspaces = 0  # Show workspace switching buttons on the taskbar
 TaskBarShowWorkspaces=0
 
@@ -50,5 +102,50 @@ TaskBarShowWorkspaces=0
 ShowSettingsMenu=0  # Hide the built-in Settings menu
 ShowThemesMenu = 0  # Show the Themes menu
 ShowHelp = 0  # Show the Help menu
-ShowLogoutMenu = 0  # Show the Logout menu
-# MenuFontNameXft = "Sans 10"  # Font for menus
+ShowLogoutMenu = 1  # Show the Logout menu
+
+# Menu Configuration Settings
+AutoReloadMenus=1           # Reload menu files automatically if set to 1
+ShowProgramsMenu=0          # Show programs submenu
+ShowFocusModeMenu=0         # Show focus mode submenu
+ShowLogoutSubMenu=1         # Show logout submenu
+ShowAbout=1                 # Show the about menu item
+ShowRun=1                   # Show the run menu item
+ShowWindowList=1            # Show the window menu item
+
+# Menu Display Settings
+MenuMaximalWidth=0          # Maximal width of popup menus, 2/3 of screen width if set to zero
+NestedThemeMenuMinNumber=25 # Minimal number of themes after which Themes menu becomes nested (0=disabled)
+
+# Menu Timing Settings
+MenuActivateDelay=40        # Delay before activating menu items (ms)
+SubmenuMenuActivateDelay=300 # Delay before activating menu submenus (ms)
+ToolTipDelay=5000           # Time before showing the tooltip (ms)
+ToolTipTime=60000           # Time before tooltip window is hidden (0=never)
+
+# Menu Behavior Settings
+ShowPopupsAbovePointer=0    # Show popup menus above mouse pointer
+ReplayMenuCancelClick=0     # Send clicks outside menus to target window
+MenuMouseTracking=0         # Menus track mouse even when no button is pressed
+
+# Window Menu Items Configuration
+# WinMenuItems options: a=rAise, c=Close, f=Fullscreen, h=Hide, i=trayIcon, k=Kill, l=Lower, m=Move, n=miNimize, r=Restore, s=Size, t=moveTo, u=rollUp, w=WindowsList, x=maXimize, y=laYer
+# Default menu: WinMenuItems=rmsnxfhualyticw
+# Menu with all options: WinMenuItems=rmsnxfhualytickw
+# MS-Windows style: WinMenuItems=rmsnxc
+WinMenuItems=rmsnxfhualyticw  # Default window menu items
+
+# Taskbar Settings
+TaskBarShowClock=1         # Hide clock (minimal setup)
+TaskBarShowAPMStatus=1     # Hide battery status
+TaskBarShowCPUStatus=1     # Hide CPU status  
+TaskBarShowNetStatus=1     # Hide network status
+
+# Window Behavior
+ClickToFocus=0             # Disable click-to-focus (use focus follows mouse)
+RaiseOnFocus=1             # Raise windows when focused
+SnapMove=1                 # Enable window snapping
+SnapDistance=8             # Snap distance in pixels
+
+# Workspace Management
+EdgeSwitchDelay=600        # Workspace switching delay

@@ -1,10 +1,62 @@
 #!/bin/sh
 # IceWM startup file
 # This script is run at the start of an IceWM session.
-# Add your startup commands below.
-
 
 # Start the picom compositor
-picom --config ~/.config/picom.conf &
+if command -v picom >/dev/null 2>&1; then
+    picom --config ~/.config/picom.conf &
+else
+    echo "Warning: picom not found" >&2
+fi
 
-feh --randomize --bg-scale $HOME/.icewm/themes/IceWM-RedZen/backgrounds/*
+# Set random wallpaper
+if [ -d "$HOME/.icewm/themes/IceWM-RedZen/backgrounds" ]; then
+    feh --randomize --bg-scale "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/"*
+else
+    echo "Warning: Background directory not found" >&2
+fi
+
+# Start notification daemon
+if command -v dunst >/dev/null 2>&1; then
+    dunst &
+else
+    echo "Warning: dunst not found" >&2
+fi
+
+# System tray applets
+if command -v nm-applet >/dev/null 2>&1; then
+    nm-applet &
+fi
+
+if command -v blueman-applet >/dev/null 2>&1; then
+    blueman-applet &
+fi
+
+if command -v xfce4-power-manager >/dev/null 2>&1; then
+    xfce4-power-manager &
+fi
+
+# Clipboard manager
+if command -v clipit >/dev/null 2>&1; then
+    clipit &
+fi
+
+# Auto-start night light (optional)
+# if command -v redshift >/dev/null 2>&1; then
+#     redshift -O 3500 &
+# fi
+
+# System monitoring
+if command -v conky >/dev/null 2>&1; then
+    conky &
+fi
+
+# Auto-mount USB drives
+if command -v udisksctl >/dev/null 2>&1; then
+    udisksctl monitor &
+fi
+
+# Screenshot daemon
+if command -v flameshot >/dev/null 2>&1; then
+    flameshot &
+fi

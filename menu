@@ -45,6 +45,8 @@ menu "Accessories" "applications-accessories" {
     prog "Terminal" "utilities-terminal" alacritty
 }
 
+separator
+
 # Audio & Video: Multimedia applications
 menu "Audio & Video" "applications-multimedia" {
     menu "Audio" "folder" {
@@ -57,6 +59,8 @@ menu "Audio & Video" "applications-multimedia" {
     }
 }
 
+separator
+
 # Development: Programming tools and IDEs
 menu "Development" "applications-development" {
     menu "IDEs" "folder" {
@@ -64,6 +68,8 @@ menu "Development" "applications-development" {
         prog "Cursor" "appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor" /home/zach/Applications/Cursor-1.1.3-x86_64_3eb0754800ff658cddb8178a3cf7c008.AppImage 
     }
 }
+
+separator
 
 # Games: Game launchers and related tools
 menu "Games" "applications-games" {
@@ -78,12 +84,16 @@ menu "Games" "applications-games" {
     }
 }
 
+separator
+
 # Graphics: Image editing and drawing
 menu "Graphics" "applications-graphics" {
     menu "2D Graphics" "folder" {
         prog "Pinta" "pinta" pinta 
     }
 }
+
+separator
 
 # Internet: Browsers, email, file transfer, chat
 menu "Internet" "applications-internet" {
@@ -97,9 +107,11 @@ menu "Internet" "applications-internet" {
         prog "qBittorrent" "qbittorrent" qbittorrent 
     }
     menu "Instant Messengers" "folder" {
-	prog "Discord" "com.discordapp.Discord" /usr/bin/flatpak run com.discordapp.Discord
+        prog "Discord" "com.discordapp.Discord" /usr/bin/flatpak run com.discordapp.Discord
     }
 }
+
+separator
 
 # IceWM Config: Quick access to config files and session actions
 menu "IceWM Config" "icewm" {
@@ -113,3 +125,30 @@ menu "IceWM Config" "icewm" {
     # Restart IceWM session
     prog "Restart IceWM" "system-restart" icewm --restart
 }
+
+separator
+
+# System: Utilities and quick toggles
+menu "System" "applications-system" {
+    prog "System Monitor" "utilities-system-monitor" htop
+    prog "Clipboard Manager" "edit-paste" clipit
+    prog "Bluetooth" "bluetooth" blueman-manager
+    prog "Network" "network-wired" nm-connection-editor
+    
+    # Display Controls
+    prog "Night Light On" "weather-clear-night" redshift -O 3500
+    prog "Night Light Off" "weather-clear" redshift -x
+    prog "Brightness Up" "display-brightness" xbacklight -inc 10
+    prog "Brightness Down" "display-brightness" xbacklight -dec 10
+    
+    # Volume Controls
+    prog "Volume Up" "audio-volume-high" pactl set-sink-volume @DEFAULT_SINK@ +5%%
+    prog "Volume Down" "audio-volume-low" pactl set-sink-volume @DEFAULT_SINK@ -5%%
+    
+    prog "Next Wallpaper" "image" feh --randomize --bg-scale "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/*"
+}
+
+separator
+
+# Fun: Random quote
+prog "Random Quote" "face-smile" sh -c 'command -v fortune && fortune | zenity --info --title="Fortune" --width=400 || zenity --info --title="Fortune" --text="Install fortune and zenity for random quotes!"'
