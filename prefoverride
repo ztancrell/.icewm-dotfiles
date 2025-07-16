@@ -18,7 +18,7 @@ TaskBarShowWindowLabels=1
 # TaskbarButtonWidthDivisor = 8  # Higher = narrower taskbar buttons
 TaskbarButtonWidthDivisor=8
 # TaskBarShowWindowIcons = 1  # Show icons on taskbar buttons
-# TaskBarShowShowDesktopButton = 1  # Show the "Show Desktop" button
+TaskBarShowShowDesktopButton = 0  # Show the "Show Desktop" button
 # TaskBarShowClock = 1  # Show the clock on the taskbar
 # TaskBarShowAPMStatus = 0  # Show battery status
 # TaskBarShowCPUStatus = 1  # Show CPU status
@@ -28,6 +28,7 @@ TaskbarButtonWidthDivisor=8
 # ColorDefaultTaskBar = "#222222"  # Background color of the taskbar
 # ColorMinimizedTaskBarAppText = "#a85d5d"  # Text color for minimized taskbar buttons
 ColorMinimizedTaskBarAppText="#a85d5d"
+MailCommand=""                              # Removes the mail icon in the taskbar
 
 # --- Window Management & Focus (see: https://ice-wm.org/manual/icewm-10.html#FOCUS-AND-BEHAVIOR) ---
 # SizeMaximized = 1  # Allow resizing of maximized windows
@@ -37,17 +38,17 @@ FocusFollowMouse = false
 
 # --- Workspaces (see: https://ice-wm.org/manual/icewm-10.html#WORKSPACES) ---
 # ShowWorkspaceButtons = 0  # Show workspace buttons on the taskbar
-ShowWorkspaceButtons=0
+ShowWorkspaceButtons=1
 # NumberOfWorkspaces = 1  # Number of workspaces
-NumberOfWorkspaces=1
+NumberOfWorkspaces=4
 # WorkspaceNames = "Main"  # Names for each workspace
-WorkspaceNames="Main"
+WorkspaceNames="Main", "DNS TLS Relay"
 # TaskBarShowWorkspaces = 0  # Show workspace switching buttons on the taskbar
-TaskBarShowWorkspaces=0
+TaskBarShowWorkspaces=1
 
 # --- Menus (see: https://ice-wm.org/manual/icewm-10.html#MENUS) ---
-# ShowSettingsMenu = 0  # Hide the built-in Settings menu
-# ShowThemesMenu = 1  # Show the Themes menu
-# ShowHelp = 1  # Show the Help menu
-# ShowLogoutMenu = 1  # Show the Logout menu
+ShowSettingsMenu= 1  # Hide the built-in Settings menu
+ShowThemesMenu = 1  # Show the Themes menu
+ShowHelp = 1  # Show the Help menu
+ShowLogoutMenu = 1  # Show the Logout menu
 # MenuFontNameXft = "Sans 10"  # Font for menus

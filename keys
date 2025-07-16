@@ -1,1 +1,9 @@
+# IceWM Keybindings
+# Format: key "<KeyCombo>" <command>
+# Example: key "Alt+F1" dmenu_run
+# Add more keybindings below for your favorite apps:
+# key "Alt+Return" alacritty
+# key "Alt+W" firefox-nightly
+# key "Alt+F" pcmanfm
+
 key "Alt+F1" dmenu_run -nb "#3f3f3f" -nf "#dcdccc" -sb "#8cd0d3" -sf "#3f3f3f" -fn "Noto Sans-10"

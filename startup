@@ -7,4 +7,4 @@
 # Start the picom compositor
 picom --config ~/.config/picom.conf &
 
-feh --randomize --bg-scale ~/.icewm/themes/IceWM-RedZen/backgrounds/*
+feh --randomize --bg-scale $HOME/.icewm/themes/IceWM-RedZen/backgrounds/*

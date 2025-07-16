@@ -25,8 +25,17 @@ menu "Accessories" "applications-accessories" {
     }
     # Utilities and system tools
     menu "Utilities" "folder" {
+        
+        # Power Manager
+        prog "Power Manager" "xfce4-power-manager" xfce4-power-manager
+        prog "Power Manager Settings" "xfce4-power-manager-settings" xfce4-power-manager-settings        
+        
+        # Wallpaper
+        prog "Set Wallpaper (Choose…)" "image" sh -c 'feh --bg-fill "$(zenity --file-selection --title="Select Wallpaper")"'
+
         prog "Application Finder" "dmenu" dmenu_run
         prog "Recoll File Search" "recoll" recoll 
+        
         prog "Disks" "org.gnome.DiskUtility" gnome-disks
         prog "Screenshot" "flameshot" flameshot gui
         prog "PulseAudio Volume Control" "pavucontrol" pavucontrol
@@ -100,6 +109,7 @@ menu "IceWM Config" "icewm" {
     prog "Edit Menu" "text-editor" leafpad /home/zach/.icewm/menu
     prog "Edit Toolbar" "text-editor" leafpad /home/zach/.icewm/toolbar
     prog "Edit Theme" "text-editor" leafpad /home/zach/.icewm/theme
+
     # Restart IceWM session
     prog "Restart IceWM" "system-restart" icewm --restart
 }

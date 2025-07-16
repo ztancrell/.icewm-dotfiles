@@ -9,9 +9,9 @@ program.filemanager="pcmanfm"  # PCManFM File Manager
 program.browser="firefox-nightly"  # Firefox Web Browser
 
 # Text Editors
-program.mousepad="mousepad"  # Mousepad Text Editor
 program.vscodium="vscodium"  # VSCodium IDE
 program.cursor="appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor"  # Cursor AppImage
+program.leafpad="leafpad"  # Leafpad Text Editor
 
 # Archive Manager
 program.xarchiver="xarchiver"  # Xarchiver
@@ -25,11 +25,11 @@ program.shotcut="shotcut"  # Shotcut Video Editor
 program.obs="obs"  # OBS Studio
 
 # Utilities
-program.catfish="catfish"  # Catfish File Search
-program.gnome_disks="gnome-disks"  # Disks Utility
-program.screenshot="xfce4-screenshooter"  # Screenshot Tool
-program.pavucontrol="pavucontrol"  # PulseAudio Volume Control
-program.application_finder="xfce4-appfinder"  # Application Finder
+program.recoll="recoll"  # Catfish File Search (unused, replaced by recoll in menu)
+program.gnome_disks="gnome-disks"  # Disks Utility (optional, kept for reference)
+program.screenshot="flameshot"  # Screenshot Tool (unused, replaced by flameshot in menu)
+program.pavucontrol="pavucontrol"  # PulseAudio Volume Control (optional, kept for reference)
+program.application_finder="dmenu"  # Application Finder (unused, replaced by dmenu in menu)
 
 # Games
 program.steam="flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam"  # Steam
