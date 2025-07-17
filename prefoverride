@@ -18,6 +18,8 @@ TaskBarShowWindowLabels=0
 TaskbarButtonWidthDivisor=8
 # TaskBarShowWindowIcons = 1  # Show icons on taskbar buttons
 TaskBarShowShowDesktopButton = 0  # Show the "Show Desktop" button
+# TaskBarShowSeparators = 1  # Show separators between taskbar sectionses
+TaskBarShowSeparators=1
 # TaskBarShowClock = 1  # Show the clock on the taskbar
 # TaskBarShowAPMStatus = 0  # Show battery status
 # TaskBarShowCPUStatus = 1  # Show CPU status
@@ -28,6 +30,7 @@ TaskBarShowShowDesktopButton = 0  # Show the "Show Desktop" button
 # ColorMinimizedTaskBarAppText = "#a85d5d"  # Text color for minimized taskbar buttons
 ColorMinimizedTaskBarAppText="#a85d5d"
 MailCommand=""                              # Removes the mail icon in the taskbar
+MailCheckInterval=0                         # Disable mail checking completely
 
 # --- Window Management & Focus (see: https://ice-wm.org/manual/icewm-10.html#FOCUS-AND-BEHAVIOR) ---
 # SizeMaximized = 1  # Allow resizing of maximized windows
@@ -111,7 +114,7 @@ ShowFocusModeMenu=0         # Show focus mode submenu
 ShowLogoutSubMenu=1         # Show logout submenu
 ShowAbout=1                 # Show the about menu item
 ShowRun=1                   # Show the run menu item
-ShowWindowList=1            # Show the window menu item
+ShowWindowList=0            # Show the window menu item
 
 # Menu Display Settings
 MenuMaximalWidth=0          # Maximal width of popup menus, 2/3 of screen width if set to zero
@@ -136,10 +139,14 @@ MenuMouseTracking=0         # Menus track mouse even when no button is pressed
 WinMenuItems=rmsnxfhualyticw  # Default window menu items
 
 # Taskbar Settings
-TaskBarShowClock=1         # Hide clock (minimal setup)
-TaskBarShowAPMStatus=1     # Hide battery status
-TaskBarShowCPUStatus=1     # Hide CPU status  
-TaskBarShowNetStatus=1     # Hide network status
+TaskBarShowAPMStatus=0
+TaskBarShowCPUStatus=0
+TaskBarShowNetStatus=0
+TaskBarShowMEMStatus=0
+TaskBarShowClock=0
+TaskBarShowMailStatus=0
+TaskBarShowMailboxStatus=0
+TaskBarShowMailStatus=0
 
 # Window Behavior
 ClickToFocus=0             # Disable click-to-focus (use focus follows mouse)
