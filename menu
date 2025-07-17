@@ -42,20 +42,21 @@ menu "Accessories" "applications-accessories" {
     }
     # Utilities and system tools
     menu "Utilities" "folder" {
-        
         # Power Manager
         prog "Power Manager" "xfce4-power-manager" xfce4-power-manager
         prog "Power Manager Settings" "xfce4-power-manager-settings" xfce4-power-manager-settings        
         
-        # Wallpaper
-        prog "Set Wallpaper (Choose…)" "image" sh -c 'feh --bg-fill "$(zenity --file-selection --title="Select Wallpaper")"'
-
+        # Application Finder
         prog "Application Finder" "dmenu" dmenu_run
         prog "Recoll File Search" "recoll" recoll 
         
         prog "Disks" "org.gnome.DiskUtility" gnome-disks
         prog "Screenshot" "flameshot" flameshot gui
         prog "PulseAudio Volume Control" "pavucontrol" pavucontrol
+        prog "System Monitor" "utilities-system-monitor" htop
+        prog "Clipboard Manager" "edit-paste" clipit
+        prog "Bluetooth" "bluetooth" blueman-manager
+        prog "Network" "network-wired" nm-connection-editor
     }
     
     # Terminal Entry
@@ -132,22 +133,14 @@ separator
 
 # System: Utilities and quick toggles
 menu "System" "applications-system" {
-    prog "System Monitor" "utilities-system-monitor" htop
-    prog "Clipboard Manager" "edit-paste" clipit
-    prog "Bluetooth" "bluetooth" blueman-manager
-    prog "Network" "network-wired" nm-connection-editor
-    
     # Display Controls
     prog "Night Light On" "weather-clear-night" redshift -O 3500
     prog "Night Light Off" "weather-clear" redshift -x
     prog "Brightness Up" "display-brightness" xbacklight -inc 10
     prog "Brightness Down" "display-brightness" xbacklight -dec 10
-    
     # Volume Controls
     prog "Volume Up" "audio-volume-high" pactl set-sink-volume @DEFAULT_SINK@ +5%%
     prog "Volume Down" "audio-volume-low" pactl set-sink-volume @DEFAULT_SINK@ -5%%
-    
-    prog "Next Wallpaper" "image" feh --randomize --bg-scale "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/*"
 }
 
 separator
