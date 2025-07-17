@@ -4,6 +4,23 @@
 # Edit this file to customize your IceWM menu.
 # -----------------------------
 
+separator
+
+# IceWM Config: Quick access to config files and session actions
+menu "IceWM Config" "icewm" {
+    # Edit main IceWM config files
+    prog "Edit Preferences" "text-editor" leafpad /home/zach/.icewm/preferences
+    prog "Edit Prefoverride" "text-editor" leafpad /home/zach/.icewm/prefoverride
+    prog "Edit Menu" "text-editor" leafpad /home/zach/.icewm/menu
+    prog "Edit Toolbar" "text-editor" leafpad /home/zach/.icewm/toolbar
+    prog "Edit Theme" "text-editor" leafpad /home/zach/.icewm/theme
+
+    # Restart IceWM session
+    prog "Restart IceWM" "system-restart" icewm --restart
+}
+
+separator
+
 # Accessories: General utilities and tools
 menu "Accessories" "applications-accessories" {
     # Archiving tools
@@ -113,21 +130,6 @@ menu "Internet" "applications-internet" {
 
 separator
 
-# IceWM Config: Quick access to config files and session actions
-menu "IceWM Config" "icewm" {
-    # Edit main IceWM config files
-    prog "Edit Preferences" "text-editor" leafpad /home/zach/.icewm/preferences
-    prog "Edit Prefoverride" "text-editor" leafpad /home/zach/.icewm/prefoverride
-    prog "Edit Menu" "text-editor" leafpad /home/zach/.icewm/menu
-    prog "Edit Toolbar" "text-editor" leafpad /home/zach/.icewm/toolbar
-    prog "Edit Theme" "text-editor" leafpad /home/zach/.icewm/theme
-
-    # Restart IceWM session
-    prog "Restart IceWM" "system-restart" icewm --restart
-}
-
-separator
-
 # System: Utilities and quick toggles
 menu "System" "applications-system" {
     prog "System Monitor" "utilities-system-monitor" htop
@@ -149,6 +151,3 @@ menu "System" "applications-system" {
 }
 
 separator
-
-# Fun: Random quote
-prog "Random Quote" "face-smile" sh -c 'command -v fortune && fortune | zenity --info --title="Fortune" --width=400 || zenity --info --title="Fortune" --text="Install fortune and zenity for random quotes!"'
