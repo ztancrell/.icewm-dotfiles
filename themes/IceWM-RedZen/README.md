@@ -21,3 +21,7 @@ This theme includes a complete set of IceWM configuration files in the `config/`
 - `menu` - Menu structure and application shortcuts
 - `startup` - Auto-start applications
 - `theme` - Active theme selection
+
+## Wallpaper Credit
+
+Wallpaper by [Philip Straub](https://www.artstation.com/philipstraub52)
