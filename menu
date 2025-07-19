@@ -30,8 +30,8 @@ menu "Accessories" "applications-accessories" {
     }
     # File management
     menu "File Management" "folder" {
-        prog "PCManFM File Manager" "system-file-manager" pcmanfm 
-        prog "Bulk Rename" "system-file-manager" pcmanfm --bulk-rename 
+        prog "Thunar File Manager" "thunar" thunar 
+        prog "Bulk Rename" "thunar" thunar --bulk-rename 
         prog "BleachBit" "bleachbit" bleachbit
     }
     # Text editors and IDEs
@@ -61,6 +61,7 @@ menu "Accessories" "applications-accessories" {
         prog "Clipboard Manager" "edit-paste" clipit
         prog "Bluetooth" "bluetooth" blueman-manager
         prog "Network" "network-wired" nm-connection-editor
+        prog "Virtual Machine Manager" "virt-manager" virt-manager
     }
     
     # Terminal Entry
