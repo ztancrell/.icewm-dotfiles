@@ -42,6 +42,10 @@ menu "Accessories" "applications-accessories" {
     }
     # Utilities and system tools
     menu "Utilities" "folder" {
+        prog "Flatseal" "com.github.tchx84.Flatseal" flatpak run com.github.tchx84.Flatseal
+        prog "Warehouse" "io.github.flattool.Warehouse" flatpak run io.github.flattool.Warehouse
+        prog "LACT" "io.github.ilya_zlobintsev.LACT" flatpak run io.github.ilya_zlobintsev.LACT
+        
         # Power Manager
         prog "Power Manager" "xfce4-power-manager" xfce4-power-manager
         prog "Power Manager Settings" "xfce4-power-manager-settings" xfce4-power-manager-settings        
@@ -70,6 +74,7 @@ menu "Audio & Video" "applications-multimedia" {
     menu "Audio" "folder" {
         prog "Spotify" "com.spotify.Client" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u  @@
         prog "mpv Media Player" "mpv" mpv --player-operation-mode=pseudo-gui -- 
+        prog "Easy Effects" "com.github.wwmm.easyeffects" flatpak run com.github.wwmm.easyeffects
     }
     menu "Video Editing" "folder" {
         prog "KDENLive" "system-video-editor" kdenlive 
@@ -92,6 +97,7 @@ separator
 # Games: Game launchers and related tools
 menu "Games" "applications-games" {
     menu "Launchers" "folder" {
+        prog "ProtonPlus" "com.vysp3r.ProtonPlus" flatpak run com.vysp3r.ProtonPlus
         prog "Steam" "com.valvesoftware.Steam" /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam @@u  @@
         prog "Heroic Games Launcher" "heroic" /opt/Heroic/heroic 
         prog "Lutris" "net.lutris.Lutris" lutris 
