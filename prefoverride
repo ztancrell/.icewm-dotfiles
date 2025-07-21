@@ -129,7 +129,7 @@ ToolTipTime=60000           # Time before tooltip window is hidden (0=never)
 # Menu Behavior Settings
 ShowPopupsAbovePointer=0    # Show popup menus above mouse pointer
 ReplayMenuCancelClick=0     # Send clicks outside menus to target window
-MenuMouseTracking=0         # Menus track mouse even when no button is pressed
+MenuMouseTracking=1         # Menus track mouse even when no button is pressed
 
 # Window Menu Items Configuration
 # WinMenuItems options: a=rAise, c=Close, f=Fullscreen, h=Hide, i=trayIcon, k=Kill, l=Lower, m=Move, n=miNimize, r=Restore, s=Size, t=moveTo, u=rollUp, w=WindowsList, x=maXimize, y=laYer
@@ -149,7 +149,7 @@ TaskBarShowMailboxStatus=0
 TaskBarShowMailStatus=0
 
 # Window Behavior
-ClickToFocus=0             # Disable click-to-focus (use focus follows mouse)
+ClickToFocus=0          # Disable click-to-focus (use focus follows mouse)
 RaiseOnFocus=1             # Raise windows when focused
 SnapMove=1                 # Enable window snapping
 SnapDistance=8             # Snap distance in pixels

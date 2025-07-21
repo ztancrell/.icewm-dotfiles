@@ -2,6 +2,11 @@
 # IceWM startup file
 # This script is run at the start of an IceWM session.
 
+# Start PolicyKit authentication agent for Thunar and other apps
+if [ -x "$(command -v lxpolkit)" ]; then
+    lxpolkit &
+fi
+
 # Start the picom compositor
 if command -v picom >/dev/null 2>&1; then
     picom --config ~/.config/picom.conf &
