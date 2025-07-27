@@ -2,7 +2,7 @@
 # IceWM startup file
 # This script is run at the start of an IceWM session.
 
-# Start PolicyKit authentication agent for Thunar and other apps
+# Start PolicyKit authentication agent for pcmanfm and other apps
 if [ -x "$(command -v lxpolkit)" ]; then
     lxpolkit &
 fi

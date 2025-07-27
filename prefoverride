@@ -136,7 +136,8 @@ MenuMouseTracking=1         # Menus track mouse even when no button is pressed
 # Default menu: WinMenuItems=rmsnxfhualyticw
 # Menu with all options: WinMenuItems=rmsnxfhualytickw
 # MS-Windows style: WinMenuItems=rmsnxc
-WinMenuItems=rmsnxfhualyticw  # Default window menu items
+# macOS style: WinMenuItems=rmxc
+WinMenuItems=rmxc  # macOS style window menu items
 
 # Taskbar Settings
 TaskBarShowAPMStatus=0

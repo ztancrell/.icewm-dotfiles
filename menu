@@ -30,22 +30,23 @@ menu "Accessories" "applications-accessories" {
     }
     # File management
     menu "File Management" "folder" {
-        prog "Thunar File Manager" "thunar" thunar 
-        prog "Bulk Rename" "thunar" thunar --bulk-rename 
+        prog "pcmanfm" "pcmanfm" pcmanfm 
         prog "BleachBit" "bleachbit" bleachbit
     }
     # Text editors and IDEs
     menu "Text Editors" "folder" {
         prog "Leafpad" "leafpad" leafpad 
-        prog "VSCodium" "vscodium" /usr/share/codium/codium 
-        prog "Cursor" "appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor" /home/zach/Applications/Cursor-1.1.3-x86_64_3eb0754800ff658cddb8178a3cf7c008.AppImage 
+        prog "VSCodium" "vscodium" /usr/share/codium/codium
     }
     # Utilities and system tools
     menu "Utilities" "folder" {
         prog "Flatseal" "com.github.tchx84.Flatseal" flatpak run com.github.tchx84.Flatseal
         prog "Warehouse" "io.github.flattool.Warehouse" flatpak run io.github.flattool.Warehouse
         prog "LACT" "io.github.ilya_zlobintsev.LACT" flatpak run io.github.ilya_zlobintsev.LACT
-        
+
+        # AppImages
+        prog "Gear Lever" "com.github.mijorus.GearLever" flatpak run com.github.mijorus.GearLever
+
         # Power Manager
         prog "Power Manager" "xfce4-power-manager" xfce4-power-manager
         prog "Power Manager Settings" "xfce4-power-manager-settings" xfce4-power-manager-settings        
@@ -88,8 +89,7 @@ separator
 # Development: Programming tools and IDEs
 menu "Development" "applications-development" {
     menu "IDEs" "folder" {
-        prog "VSCodium" "vscodium" /usr/share/codium/codium 
-        prog "Cursor" "appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor" /home/zach/Applications/Cursor-1.1.3-x86_64_3eb0754800ff658cddb8178a3cf7c008.AppImage 
+        prog "VSCodium" "vscodium" /usr/share/codium/codium
     }
 }
 

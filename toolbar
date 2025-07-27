@@ -1,3 +1,3 @@
 prog "Web Browser" "firefox-nightly" firefox-nightly
-prog "File Manager" "system-file-manager" thunar
+prog "File Manager" "system-file-manager" pcmanfm
 prog "Terminal" "utilities-terminal" alacritty
