@@ -25,7 +25,7 @@ separator
 menu "Accessories" "applications-accessories" {
     # Archiving tools
     menu "Archiving" "folder" {
-        prog "Xarchiver" "xarchiver" xarchiver 
+        prog "xarchiver" "xarchiver" xarchiver 
         prog "XfBurn" "org.xfce.xfburn" xfburn
     }
     # File management

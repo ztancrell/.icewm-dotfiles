@@ -3,14 +3,13 @@ program.xterm="xterm"  # Fallback terminal
 program.alacritty="alacritty"  # Primary terminal
 
 # File Manager
-program.filemanager="pcmanfm"  # PCManFM File Manager
+program.filemanager="thunar"  # Thunar File Manager
 
 # Web Browser
 program.browser="firefox-nightly"  # Firefox Web Browser
 
 # Text Editors
 program.vscodium="vscodium"  # VSCodium IDE
-program.cursor="appimagekit_402369d7312601ba1facc6e361ccbfc9_co.anysphere.cursor"  # Cursor AppImage
 program.leafpad="leafpad"  # Leafpad Text Editor
 
 # Archive Manager
