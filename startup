@@ -1,29 +1,37 @@
 #!/bin/sh
 # IceWM startup file
-# This script is run at the start of an IceWM session.
+# Run at the start of an IceWM session.
+
+# Helper: launch a daemon and restart if it exits (for picom & dunst)
+auto_restart() {
+    while true; do
+        "$@"
+        sleep 2
+    done
+}
 
 # Start PolicyKit authentication agent for pcmanfm and other apps
-if [ -x "$(command -v lxpolkit)" ]; then
+if command -v lxpolkit >/dev/null 2>&1; then
     lxpolkit &
 fi
 
-# Start the picom compositor
+# Start/restart picom compositor
 if command -v picom >/dev/null 2>&1; then
-    picom --config ~/.config/picom.conf &
+    auto_restart picom --config "$HOME/.config/picom.conf" &
 else
     echo "Warning: picom not found" >&2
 fi
 
-# Set random wallpaper
+# Set a random wallpaper (change path as needed)
 if [ -d "$HOME/.icewm/themes/IceWM-RedZen/backgrounds" ]; then
     feh --randomize --bg-scale "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/"*
 else
     echo "Warning: Background directory not found" >&2
 fi
 
-# Start notification daemon
+# Start/restart dunst notification daemon
 if command -v dunst >/dev/null 2>&1; then
-    dunst &
+    auto_restart dunst &
 else
     echo "Warning: dunst not found" >&2
 fi
@@ -37,8 +45,9 @@ if command -v blueman-applet >/dev/null 2>&1; then
     blueman-applet &
 fi
 
-if command -v xfce4-power-manager >/dev/null 2>&1; then
-    xfce4-power-manager &
+# LXQt Power Manager (replace xfce4-power-manager)
+if command -v lxqt-powermanagement >/dev/null 2>&1; then
+    lxqt-powermanagement &
 fi
 
 # Clipboard manager
@@ -56,7 +65,7 @@ if command -v conky >/dev/null 2>&1; then
     conky &
 fi
 
-# Auto-mount USB drives
+# Auto-mount USB drives (monitor only)
 if command -v udisksctl >/dev/null 2>&1; then
     udisksctl monitor &
 fi
@@ -65,3 +74,5 @@ fi
 if command -v flameshot >/dev/null 2>&1; then
     flameshot &
 fi
+
+exit 0
