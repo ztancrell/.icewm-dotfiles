@@ -1,8 +1,7 @@
 #!/bin/sh
 # IceWM startup file
-# Run at the start of an IceWM session.
 
-# Helper: launch a daemon and restart if it exits (for picom & dunst)
+# Helper for auto-restarting apps
 auto_restart() {
     while true; do
         "$@"
@@ -10,30 +9,24 @@ auto_restart() {
     done
 }
 
-# Start PolicyKit authentication agent for pcmanfm and other apps
+# PolicyKit agent
 if command -v lxpolkit >/dev/null 2>&1; then
     lxpolkit &
 fi
 
-# Start/restart picom compositor
+# Picom compositor (auto-restart)
 if command -v picom >/dev/null 2>&1; then
-    auto_restart picom --config "$HOME/.config/picom.conf" &
-else
-    echo "Warning: picom not found" >&2
+    auto_restart picom --config ~/.config/picom.conf &
 fi
 
-# Set a random wallpaper (change path as needed)
-if [ -d "$HOME/.icewm/themes/IceWM-RedZen/backgrounds" ]; then
-    feh --randomize --bg-scale "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/"*
-else
-    echo "Warning: Background directory not found" >&2
+# Set random wallpaper
+if [ -d "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/artstation/" ]; then
+    feh --randomize --bg-scale "$HOME/.icewm/themes/IceWM-RedZen/backgrounds/artstation/"*
 fi
 
-# Start/restart dunst notification daemon
+# Dunst (auto-restart)
 if command -v dunst >/dev/null 2>&1; then
     auto_restart dunst &
-else
-    echo "Warning: dunst not found" >&2
 fi
 
 # System tray applets
@@ -45,9 +38,9 @@ if command -v blueman-applet >/dev/null 2>&1; then
     blueman-applet &
 fi
 
-# LXQt Power Manager (replace xfce4-power-manager)
-if command -v lxqt-powermanagement >/dev/null 2>&1; then
-    lxqt-powermanagement &
+# LXQt power manager
+if command -v xfce4-power-manager >/dev/null 2>&1; then
+    xfce4-power-manager &
 fi
 
 # Clipboard manager
@@ -55,19 +48,19 @@ if command -v clipit >/dev/null 2>&1; then
     clipit &
 fi
 
-# Auto-start night light (optional)
+# Night light (optional)
 # if command -v redshift >/dev/null 2>&1; then
 #     redshift -O 3500 &
 # fi
 
-# System monitoring
+# Conky
 if command -v conky >/dev/null 2>&1; then
     conky &
 fi
 
-# Auto-mount USB drives (monitor only)
-if command -v udisksctl >/dev/null 2>&1; then
-    udisksctl monitor &
+# USB automount (optional, udiskie is better)
+if command -v udiskie >/dev/null 2>&1; then
+    udiskie &
 fi
 
 # Screenshot daemon
