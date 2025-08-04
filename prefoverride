@@ -144,7 +144,13 @@ TaskBarShowAPMStatus=0
 TaskBarShowCPUStatus=0
 TaskBarShowNetStatus=0
 TaskBarShowMEMStatus=0
-TaskBarShowClock=0
+
+TaskBarShowClock=1
+TaskBarClockCommand=""
+TaskBarClockLClickCommand=""
+TaskBarClockFormat="%I:%M %p"         # 12-hour time; use "%H:%M" for 24-hour
+TaskBarClockTooltipFormat="%A, %d %B %Y"  # Tooltip shows full date (day, date, month, year)
+
 TaskBarShowMailStatus=0
 TaskBarShowMailboxStatus=0
 TaskBarShowMailStatus=0
