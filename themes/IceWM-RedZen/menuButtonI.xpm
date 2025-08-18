@@ -1,5 +1,5 @@
 /* XPM */
-static char * minimizeI_xpm[] = {
+static char * menuButtonI_xpm[] = {
 "20 40 28 1",
 " 	c None",
 ".	c #303030",
@@ -69,5 +69,3 @@ static char * minimizeI_xpm[] = {
 "....................",
 "....................",
 "...................."};
-
-

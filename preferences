@@ -7,6 +7,7 @@ program.filemanager="thunar"  # Thunar File Manager
 
 # Web Browser
 program.browser="firefox-nightly"  # Firefox Web Browser
+program.browser="brave-browser"  # Brave Browser (backup)
 
 # Text Editors
 program.vscodium="vscodium"  # VSCodium IDE

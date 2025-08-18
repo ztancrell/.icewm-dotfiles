@@ -124,6 +124,7 @@ separator
 menu "Internet" "applications-internet" {
     menu "Web Browsers" "folder" {
         prog "Firefox Nightly" "firefox" firefox-nightly
+        prog "Brave Browser" "brave-browser" brave-browser
     }
     menu "Email" "folder" {
         prog "Thunderbird" "thunderbird" thunderbird 
