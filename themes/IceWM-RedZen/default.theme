@@ -52,10 +52,10 @@ TitleBarHorzOffset=10       # Horizontal offset for title text (-128 to 128)
 # WINDOW BORDER SIZES
 # =============================================================================
 # Border sizes for resizable windows
-BorderSizeX=5               # Left/right border width (0-128)
-BorderSizeY=5               # Top/bottom border height (0-128)
-CornerSizeX=10              # Width of window corner (0-64)
-CornerSizeY=10              # Height of window corner (0-64)
+BorderSizeX=0               # Left/right border width (0-128)
+BorderSizeY=0               # Top/bottom border height (0-128)
+CornerSizeX=0              # Width of window corner (0-64)
+CornerSizeY=0              # Height of window corner (0-64)
 
 # Alternative border settings (commented out - no borders)
 #BorderSizeX=0              # No left/right borders
