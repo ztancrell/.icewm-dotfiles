@@ -6,7 +6,7 @@ Welcome to my personalized IceWM setup! This directory contains all configuratio
 
 ## 🖼️ Screenshots
 
-![RedZen Theme Screenshot](themes/IceWM-RedZen/screenshots/desktop.png)
+![RedZen Theme Screenshot](themes/IceWM-RedZen/screenshots/image.png)
 
 ## ✨ Features
 - **Super lightweight**: IceWM is blazing fast and uses minimal resources.
