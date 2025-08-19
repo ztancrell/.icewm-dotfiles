@@ -7,7 +7,7 @@
 separator
 
 # IceWM Config: Quick access to config files and session actions
-menu "IceWM Config" "icewm" {
+menu ":::::: IceWM Config ::::::" "icewm" {
     # Edit main IceWM config files
     prog "Edit Preferences" "text-editor" leafpad /home/zach/.icewm/preferences
     prog "Edit Prefoverride" "text-editor" leafpad /home/zach/.icewm/prefoverride
@@ -67,6 +67,7 @@ menu "Accessories" "applications-accessories" {
     
     # Terminal Entry
     prog "Terminal" "utilities-terminal" alacritty
+    prog "Fallback Terminal" "xterm" xterm
 }
 
 separator
@@ -90,6 +91,7 @@ separator
 menu "Development" "applications-development" {
     menu "IDEs" "folder" {
         prog "VSCodium" "vscodium" /usr/share/codium/codium
+        prog "Cursor IDE" "cursor" /opt/Cursor/bin/cursor
     }
 }
 
@@ -123,7 +125,7 @@ separator
 # Internet: Browsers, email, file transfer, chat
 menu "Internet" "applications-internet" {
     menu "Web Browsers" "folder" {
-        prog "Firefox Nightly" "firefox" firefox-nightly
+        prog "Firefox Nightly" "firefox-nightly" firefox-nightly
         prog "Brave Browser" "brave-browser" brave-browser
     }
     menu "Email" "folder" {
