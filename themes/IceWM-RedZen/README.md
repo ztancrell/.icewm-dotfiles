@@ -22,6 +22,8 @@ This theme includes a complete set of IceWM configuration files in the `config/`
 - `startup` - Auto-start applications
 - `theme` - Active theme selection
 
-## Wallpaper Credit
+## Credit
 
-Wallpaper by [Philip Straub](https://www.artstation.com/philipstraub52)
+Wallpapers by [Philip Straub](https://www.artstation.com/philipstraub52)
+
+IceWM macOS-like window buttons are sourced from [IceWM-KM-Reborn](https://store.kde.org/p/1416994).

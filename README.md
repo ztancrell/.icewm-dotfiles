@@ -13,7 +13,6 @@ Welcome to my personalized IceWM setup! This directory contains all configuratio
 - **Custom menus & toolbar**: Tailored for my workflow, with quick access to my favorite apps.
 - **RedZen theme**: A Zenburn-inspired, red-accented theme for a unique look.
 - **Keyboard & mouse friendly**: Optimized for both keyboard shortcuts and mouse-driven use.
-- **XFCE-free**: All XFCE dependencies removed for maximum performance.
 
 ---
 
@@ -37,7 +36,7 @@ Welcome to my personalized IceWM setup! This directory contains all configuratio
 ---
 
 ## 👤 Credits & Tools
-- **Config & customizations:** Zach (2024)
+- **Config & customizations:** Zach (2025)
 - **AI documentation & config help:** [Cursor AI](https://cursor.so/)
 - **Theme inspiration:** Zenburn by Ryan Reamsbottom, RedZen by Zach
 
